@@ -26,7 +26,6 @@
 
 body {
     margin: 0;
-    padding: 0;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -44,7 +43,7 @@ main {
 }
 
 .cont {
-    width: 90%;
+    width: 85%;
     height: 100vh;
 }
 
@@ -54,7 +53,7 @@ main {
     align-items: center;
     width: 100%;
     height: 100%;
-    font-size: 24px;
+    font-size: 30px;
     font-family: "macherie";
     margin: 30px 0;
     flex-wrap: wrap;
@@ -105,30 +104,36 @@ button {
 }
 
 
+.g {
+    width: 30%; 
+    height: 100%; 
+    padding: 20px; 
+    border-radius: 30px; 
+    border: 1px #000 solid;
+}
+
 @media (width<1000px) {
+    body {
+        overflow: visible;
+    }
     * {
         max-width: 90vw;
     }
     .cont {
         width: 80%;
     }
-    
-    .random {
-        flex-direction: column;
-        gap: 20px;
-    }
 
-    .container {
-        height: 150px;
-        font-size: 17px;
-        flex-direction: column;
+    .g {
+        height: 30vh;
+        width: 100%;
+        
         
     }
-    .section {
-        padding: 20px;
-    }
-    button {
-        font-size: 15px;
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        flex-wrap: nowrap;
+        margin: 20px;
     }
 }
 
