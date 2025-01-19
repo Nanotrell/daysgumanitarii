@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Сколько дней до ЕГЭ?</title>
+</head>
+<body>
+    <main>
+    </main>
+    <div class="cont">
+        <div class="container">
+            <div style="width: 20%; height: 100%; padding: 20px; border-radius: 30px; border: 1px #000 solid;"><p>До ЕГЭ по математике</p>
+            <div class="text1"></div></div>
+            <div style="width: 20%; height: 100%; padding: 20px; border-radius: 30px; border: 1px #000 solid;"><p>До ЕГЭ по обществу</p>
+            <div class="text1"></div></div>
+            <div style="width: 20%; height: 100%; padding: 20px; border-radius: 30px; border: 1px #000 solid;"><p>До ЕГЭ по русскому языку</p>
+            <div class="text1"></div></div>
+            <div style="width: 20%; height: 100%; padding: 20px; border-radius: 30px; border: 1px #000 solid;"><p>До ЕГЭ по литературе</p>
+            <div class="text1"></div></div>
+        </div>
+    </div>
+</body>
+<script>
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var k = getRandomInt(1, 12);
+console.log(k)
+var Body = document.getElementsByTagName("body")[0].style;
+var Main = document.getElementsByTagName("main")[0].style;
+if (k==1) {
+    Main.background = "radial-gradient(#e66465, #9198e5)";
+    Body.background = "radial-gradient(#e66465, #9198e5)";
+}
+if (k==2) {
+    Main.background = "radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 100%)"
+    Body.background = "radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(252,176,69,1) 100%)";
+}
+if (k==3) {
+    Main.background = "radial-gradient(circle, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%)";
+}
+if (k==4) {
+    Main.background = "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)";
+}
+if (k==5) {
+    Main.background = "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(198,233,148,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(198,233,148,1) 100%)";
+}
+if (k==6) {
+    Main.background = "radial-gradient(circle, rgba(238,174,174,1) 0%, rgba(198,233,148,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(238,174,174,1) 0%, rgba(198,233,148,1) 100%)";
+}
+if (k==7) {
+    Main.background = "radial-gradient(circle, rgba(152,215,29,1) 0%, rgba(198,233,148,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(152,215,29,1) 0%, rgba(198,233,148,1) 100%)";
+}
+if (k==8) {
+    Main.background = "radial-gradient(circle, rgba(152,215,29,1) 0%, rgba(148,157,233,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(152,215,29,1) 0%, rgba(148,157,233,1) 100%)";
+}
+if (k==9) {
+    Main.background = "radial-gradient(circle, rgba(152,215,29,1) 0%, rgba(212,148,233,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(152,215,29,1) 0%, rgba(212,148,233,1) 100%)";
+}
+if (k==10) {
+    Main.background = "radial-gradient(circle, rgba(29,215,79,1) 0%, rgba(212,148,233,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(29,215,79,1) 0%, rgba(212,148,233,1) 100%)";
+}
+if (k==11) {
+    Main.background = "radial-gradient(circle, rgba(47,29,215,1) 0%, rgba(212,148,233,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(47,29,215,1) 0%, rgba(212,148,233,1) 100%)";
+}
+if (k==12) {
+    Main.background = "radial-gradient(circle, rgba(47,29,215,1) -40%, rgba(233,148,200,1) 100%)";
+    Body.background = "radial-gradient(circle, rgba(47,29,215,1) -40%, rgba(233,148,200,1) 100%)";
+}
+
+let date = new Date();
+let month = date.getMonth(); 
+let day = date.getDate();
+
+let cntDaysR;
+let cntDaysM;
+let cntDaysI;
+let cntDaysL;
+
+if (Number(month)==0) {
+    cntDaysR = 31-Number(day)+28+31+30+30
+    cntDaysM = 31-Number(day)+28+31+30+27
+    cntDaysI = 31-Number(day)+28+31+30+33
+    cntDaysL = 31-Number(day)+28+31+30+23
+} else if (Number(month)==1) {
+    cntDaysR = 28-Number(day)+31+30+30
+    cntDaysM = 28-Number(day)+31+30+27
+    cntDaysI = 28-Number(day)+31+30+33
+    cntDaysL = 28-Number(day)+31+30+23
+} else if (Number(month)==2) {
+    cntDaysR = 31-Number(day)+30+30
+    cntDaysM = 31-Number(day)+30+27
+    cntDaysI = 31-Number(day)+30+33
+    cntDaysL = 31-Number(day)+30+23
+} else if (Number(month)==3) {
+    cntDaysR = 30-Number(day)+30
+    cntDaysM = 30-Number(day)+27
+    cntDaysI = 30-Number(day)+33
+    cntDaysL = 30-Number(day)+23
+} else if (Number(month)==4) {
+    cntDaysR = 30-Number(day)
+    cntDaysM = 27-Number(day)
+    cntDaysI = 33-Number(day)
+    cntDaysL = 23-Number(day)
+} else if (Number(month)==5) {
+    cntDaysI = 2-Number(day)
+}
+
+if (cntDaysR<=0) {
+    cntDaysR = 0;
+}
+if (cntDaysM<=0) {
+    cntDaysM = 0;
+}
+if (cntDaysI<=0) {
+    cntDaysI = 0;
+}   
+if (cntDaysL<=0) {
+    cntDaysL = 0;
+}   
+
+if (cntDaysM%10==0 || cntDaysM%10==6 || cntDaysM%10==5 || cntDaysM%10==7 || cntDaysM%10==8 || cntDaysM%10==9) {
+    document.getElementsByClassName("text1")[0].textContent = String(cntDaysM) + " дней";
+} else if (cntDaysM%10==1) {
+    document.getElementsByClassName("text1")[0].textContent = String(cntDaysM) + " день";
+} else if (cntDaysM%10==3 || cntDaysM%10==4 || cntDaysM%10==2) {
+    document.getElementsByClassName("text1")[0].textContent = String(cntDaysM) + " дня";
+}
+ 
+if (cntDaysI%10==0 || cntDaysI%10==6 || cntDaysI%10==5 || cntDaysI%10==7 || cntDaysI%10==8 || cntDaysI%10==9) {
+    document.getElementsByClassName("text1")[1].textContent = String(cntDaysI) + " дней";
+} else if (cntDaysI%10==1) {
+    document.getElementsByClassName("text1")[1].textContent = String(cntDaysI) + " день";
+} else if (cntDaysI%10==3 || cntDaysI%10==4 || cntDaysI%10==2) {
+    document.getElementsByClassName("text1")[1].textContent = String(cntDaysI) + " дня";
+}
+
+if (cntDaysR%10==0 || cntDaysR%10==6 || cntDaysR%10==5 || cntDaysR%10==7 || cntDaysR%10==8 || cntDaysR%10==9) {
+    document.getElementsByClassName("text1")[2].textContent = String(cntDaysR) + " дней";
+} else if (cntDaysR%10==1) {
+    document.getElementsByClassName("text1")[2].textContent = String(cntDaysR) + " день";
+} else if (cntDaysR%10==3 || cntDaysR%10==4 || cntDaysR%10==2) {
+    document.getElementsByClassName("text1")[2].textContent = String(cntDaysR) + " дня";
+}
+
+if (cntDaysL%10==0 || cntDaysL%10==6 || cntDaysL%10==5 || cntDaysL%10==7 || cntDaysL%10==8 || cntDaysL%10==9) {
+    document.getElementsByClassName("text1")[3].textContent = String(cntDaysL) + " дней";
+} else if (cntDaysL%10==1) {
+    document.getElementsByClassName("text1")[3].textContent = String(cntDaysL) + " день";
+} else if (cntDaysL%10==3 || cntDaysL%10==4 || cntDaysL%10==2) {
+    document.getElementsByClassName("text1")[3].textContent = String(cntDaysL) + " дня";
+}
+
+
+</script>
+</html>
